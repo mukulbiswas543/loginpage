@@ -4,18 +4,26 @@
 <title>
 INSERTION FORM
 </title>
+<script>
+function f1()
+{
+var x=document.getElementById("2");
+x.style.color="blue";
+x.style.font-size=14px;
+}
+</script>
 </head>
 <body>
-<h1>Loginform</h1>
+<h1>STUDENT LOGIN</h1>
 <form action="validation.php" method="post">
 <table>
 <tr>
-<th> USERNAME</th> 
-<td><input type="text" name="username" /></td>
+<th id="2"> ENROLLMENT NO</th> 
+<td><input type="text" name="enrollno" /></td>
 </tr>
 <tr>
-<th> PASSWORD</th>
-<td><input type="Password" name="password" /></td>
+<th > PASSWORD</th>
+<td><input type="Password" name="Password" /></td>
 </tr>
 <tr>
 <th></th>

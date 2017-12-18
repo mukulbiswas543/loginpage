@@ -1,20 +1,20 @@
 <?php
 session_start();
-$username=$_POST['username'];
-$password=$_POST['password'];
+$enrollno=$_POST['enrollno'];
+$password=$_POST['Password'];
 $con=mysqli_connect('localhost','root');
-mysqli_select_db($con,'login_db');
-$q="select * from user where username='$username' && password='$password'";
+mysqli_select_db($con,'wbscte_db');
+$q="select * from registration where enrollmentno='$enrollno' && password='$password'";
 $result=mysqli_query($con,$q);
 $num=mysqli_num_rows($result);
 if($num==1)
 {
-	$_SESSION['username']=$username;
-	header('location:http://localhost/loginpage/home.php');
+	$_SESSION['enrollno']=$enrollno;
+	header('location:http://localhost/project/home.php');
 }
 else
 {
-header('location:http://localhost/loginpage/login.php');
+header('location:http://localhost/project/login.php');
 }
 ?>
 	
